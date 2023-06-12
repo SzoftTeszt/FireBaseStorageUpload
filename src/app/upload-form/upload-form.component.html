@@ -1,1 +1,16 @@
-<p>upload-form works!</p>
+<div class="my-3">
+    <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+    <input (change)="selectFile($event)" class="form-control" type="file" id="formFile">
+  </div>
+  <div class="mb-3">
+  <button [disabled]="!selectedFiles" (click)="upload()" type="button" class="btn btn-primary">Upload</button>
+</div>
+  <div class="progress mb-3">
+    <div class="progress-bar bg-info" 
+    role="progressbar" 
+    aria-valuemin="0" 
+    aria-valuemax="100"
+    [ngStyle]="{width:percentage+'%'}"
+    ></div>
+  </div>
+  
