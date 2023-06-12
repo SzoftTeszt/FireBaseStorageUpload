@@ -23,8 +23,10 @@ export class UploadFormComponent {
 
   upload(){
     const file= this.selectedFiles?.item(0);
+    this.selectedFiles=undefined;
     if (file)
     {
+
         this.currentFile= new UploadFile(file);
         this.base.pushFileToStorage(this.currentFile).subscribe(
           {

@@ -1,1 +1,4 @@
-<p>upload-details works!</p>
+<div *ngIf="file && file.name">
+    <a href="{{file.url}}">{{file.name.substring(13)}}</a>
+    <button (click)="deleteFile(file)" style="float:right" type="button" class="btn btn-primary">Delete</button>
+</div>

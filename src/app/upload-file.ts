@@ -1,6 +1,6 @@
 export class UploadFile {
-    key?:string;
-    name?:string;
+    key!:string;
+    name!:string;
     url?:string;
     file:File;
 

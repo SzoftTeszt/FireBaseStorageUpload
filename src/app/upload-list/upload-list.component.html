@@ -1,1 +1,11 @@
-<p>upload-list works!</p>
+
+<div class="card" >
+    <div class="card-body">
+      <h5 class="card-title">List of Files</h5>
+      <ul class="list-group">       
+        <li *ngFor="let file of files" class="list-group-item">
+            <app-upload-details [file]="file" (fileDelete)=" deleteFile($event)"></app-upload-details>
+        </li>
+      </ul>
+    </div>
+  </div>
